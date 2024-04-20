@@ -10,6 +10,7 @@ import { HamburgerIcon, SearchIcon } from "@chakra-ui/icons";
 import { useRecoilState } from "recoil";
 import { CoreDrawerSelector } from "@/modules/core/infrastructure/recoil";
 import { motion, useTransform, useMotionTemplate, MotionValue } from "framer-motion";
+import MotionHeading from "@/modules/shared/presentation/atoms/MotionHeading";
 
 export type HeaderProps = {
 	scrollYProgress: MotionValue<number>;
@@ -76,8 +77,7 @@ export default function Header({ scrollYProgress }: HeaderProps) {
               bg="transparent"
             />
             <ChakraBox flex="1">
-              <ChakraHeading
-                as={motion.h6}
+              <MotionHeading
                 size="md"
 								width="fit-content"
                 ml="4"
@@ -87,7 +87,7 @@ export default function Header({ scrollYProgress }: HeaderProps) {
                 }}
               >
                 PokeVault
-              </ChakraHeading>
+              </MotionHeading>
             </ChakraBox>
             <ChakraIconButton
               aria-label="menu"

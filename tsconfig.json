@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -11,7 +15,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-		"baseUrl": ".",
+    "baseUrl": ".",
     "incremental": true,
     "plugins": [
       {
@@ -19,9 +23,16 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     },
-    "types": ["cypress", "node", "jest", "@testing-library/jest-dom"]
+    "types": [
+      "cypress",
+      "node",
+      "jest",
+      "@testing-library/jest-dom"
+    ]
   },
   "references": [
     {
@@ -30,5 +41,14 @@
     {
       "path": "./tsconfig.spec.json"
     }
+  ],
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

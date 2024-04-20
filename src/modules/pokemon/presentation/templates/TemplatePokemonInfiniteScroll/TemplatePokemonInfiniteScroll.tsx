@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { Container as ChakraContainer } from "@chakra-ui/react";
 import { MotionValue, motion, useTransform } from "framer-motion";
+import MotionContainer from "@/modules/shared/presentation/atoms/MotionContainer/MotionContainer";
 
 export type TemplatePokemonInfiniteScrollProps = {
 	scrollYProgress: MotionValue<number>;
@@ -17,13 +17,12 @@ export default function TemplatePokemonInfiniteScroll({
   return (
     <>
       {header}
-      <ChakraContainer
-        as={motion.div}
+      <MotionContainer
         initial={{ paddingTop: 110 }}
         style={{ paddingTop }}
       >
         {infiniteScroll}
-      </ChakraContainer>
+      </MotionContainer>
     </>
   );
 }
